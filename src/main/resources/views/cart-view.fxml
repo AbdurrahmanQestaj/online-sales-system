@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.onlinesalessystem.controllers.CartController"
+      spacing="12"
+      alignment="CENTER"
+      stylesheets="@../styles/style.css"
+      style="-fx-padding: 30;">
+
+    <Label text="Shporta"
+           style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+    <ListView fx:id="cartListView"
+              prefWidth="650"
+              prefHeight="280" />
+
+    <Label fx:id="totalLabel"
+           text="Totali: 0.00 EUR"
+           style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Hiq nga shporta"
+                onAction="#handleRemoveFromCart" />
+
+        <Button text="Checkout"
+                onAction="#handleCheckout" />
+
+        <Button text="Kthehu ne Home"
+                onAction="#goToHome" />
+    </HBox>
+
+    <Label fx:id="messageLabel"
+           textFill="red" />
+</VBox>
