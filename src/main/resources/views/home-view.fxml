@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.onlinesalessystem.controllers.HomeController"
+      spacing="15"
+      alignment="CENTER"
+      stylesheets="@../styles/style.css"
+      style="-fx-padding: 40;">
+
+    <Label fx:id="welcomeLabel"
+           text="Mire se erdhe!"
+           style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+    <Button text="Shiko Produktet"
+            onAction="#goToProducts"
+            maxWidth="250" />
+
+    <Button text="Shto Produkt"
+            onAction="#goToAddProduct"
+            maxWidth="250" />
+
+    <Button text="Shporta"
+            onAction="#goToCart"
+            maxWidth="250" />
+
+    <Button text="Porosite e mia"
+            onAction="#goToOrders"
+            maxWidth="250" />
+
+    <Button text="Logout"
+            onAction="#handleLogout"
+            maxWidth="250" />
+
+    <Button text="Produktet e mia"
+            onAction="#goToMyProducts"
+            maxWidth="250" />
+
+    <Label fx:id="messageLabel"
+           textFill="red" />
+</VBox>
