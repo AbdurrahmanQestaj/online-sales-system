@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.onlinesalessystem.controllers.MyProductsController"
+      spacing="12"
+      alignment="CENTER"
+      stylesheets="@../styles/style.css"
+      style="-fx-padding: 30;">
+
+    <Label text="Produktet e mia"
+           style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+    <ListView fx:id="myProductsListView"
+              prefWidth="650"
+              prefHeight="300" />
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Fshi Produktin"
+                onAction="#handleDeleteProduct" />
+
+        <Button text="Rifresko"
+                onAction="#loadMyProducts" />
+
+        <Button text="Kthehu ne Home"
+                onAction="#goToHome" />
+    </HBox>
+
+    <Label fx:id="messageLabel"
+           textFill="red" />
+</VBox>
